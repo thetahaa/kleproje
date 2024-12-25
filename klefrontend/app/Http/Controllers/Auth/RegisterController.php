@@ -21,11 +21,11 @@ class RegisterController extends Controller
     public function register(Request $request)
     {
         // Giriş verilerini doğrulama
-        $validator = Validator::make($request->all(), [
-            'name' => 'required|string|max:255',
-            'email' => 'required|string|email|max:255|unique:users',
-            'password' => 'required|string|min:8|confirmed',
-        ]);
+        // $credentials = $request->validate([
+        //     'name' => 'required|string|max:255',
+        //     'email' => 'required|string|email|max:255|unique:users',
+        //     'password' => 'required|string|min:8|confirmed',
+        // ]);
 
         $response = Http::timeout(1000)->post("http://api_nginx/api/register", [
             'name' => $request->name,

@@ -28,7 +28,6 @@ Route::get('/register', function () {
 });
 
 
-
 Route::get('/register', [RegisterController::class, 'showRegistrationForm'])->name('register');
 Route::post('/register', [RegisterController::class, 'register']);
 
@@ -51,4 +50,4 @@ Route::middleware([tokenmiddleware::class])->group(function () {
     Route::post('logout', [LoginController::class, 'logout'])->name('logout');
     Route::get('logout', [LoginController::class, 'logout'])->name('logout');
 });
-// Route::post('logout', [AuthController::class, 'logout'])->name('logout');
+

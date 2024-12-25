@@ -17,10 +17,10 @@ class LoginController extends Controller
 
     public function login(Request $request)
     {
-        $credentials = $request->validate([
-            'email' => 'required|string|email',
-            'password' => 'required|string',
-        ]);
+        // $credentials = $request->validate([
+        //     'email' => 'required|string|email',
+        //     'password' => 'required|string',
+        // ]);
 
         $response = Http::timeout(1000)->acceptJson()->post("http://api_nginx/api/login", [
             'email' => $request->email,
