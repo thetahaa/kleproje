@@ -18,8 +18,8 @@
                     <form action="{{ route('register') }}" method="POST" id="form">
                         @csrf
                         <h3 id="register">Kayıt Ol</h3>
-                        <input type="text" name="name" placeholder="İsim Soyisim" required id="name" style="margin-top: 30px;">
-                        <input type="email" name="email" placeholder="E-Mail" required id="email">
+                        <input type="text" class="name" name="name" placeholder="İsim Soyisim" required style="margin-top: 30px;">
+                        <input type="email" class="email" name="email" placeholder="E-Mail" required>
                         <div class="input-group">
                             <input type="password" class="form-control pass" id="password" name="password" placeholder="Şifre" required>
                                 <span id="toggle-password">

@@ -16,14 +16,14 @@
                 <form id="form" method="POST" action="{{ route('login') }}">
                     @csrf
                     <h3 id="login">Giriş Yap</h3>
-                    <input type="email" name="email" placeholder="E-Mail" required id="email" style="margin-top: 30px;">
+                    <input type="email" class="email" name="email" placeholder="E-Mail" required style="margin-top: 30px;">
                     <div class="input-group">
                         <input type="password" class="form-control pass" id="password" name="password" placeholder="Şifre" required>
                             <span id="toggle-password">
                                 <i class="fa fa-eye-slash goz"></i>
                             </span>
                     </div>
-                    
+
                     @if ($errors->has('login'))
                         <div id="warning">
                             {{ $errors->first('login') }}
