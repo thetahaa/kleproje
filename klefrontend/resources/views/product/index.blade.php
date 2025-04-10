@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="{{ asset('css/product.css') }}">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="{{ asset('images/panther.png') }}">
     <title>kle | Ürünler</title>
 </head>
 
